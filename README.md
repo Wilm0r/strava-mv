@@ -15,11 +15,18 @@ Update the script to whatever makes sense to me. Config and code are
 mixed because I couldn't be bothered to do that part the right way since
 I don't expect this to pick up many or any users. :-)
 
-The `build_updates()` functions gets fed a full stravalib `Activity`
+The `build_updates()` functions gets fed a full stravalib
+[`Activity`](https://github.com/hozn/stravalib/blob/master/stravalib/model.py)
 object. Inspect it all you want, see my current implementation for
 examples of what you can do. Then fill a hash with updates you'd like to
-apply (using `[update_activity](https://github.com/hozn/stravalib/blob/master/stravalib/client.py)`
+apply (using [`update_activity`](https://github.com/hozn/stravalib/blob/master/stravalib/client.py)
 arguments as keys) and return it. Done.
 
 To start using it, just run `login.py` once first to create your
 `access_token` file, then you're done.
+
+## Dependencies
+
+Oh yes, you do need to install [stravalib](https://github.com/hozn/stravalib).
+Not apt-gettable yet annoyingly. :-( Try `pip install stravalib`
+instead. Or I've just set up a virtualenv for it.
